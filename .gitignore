@@ -1,0 +1,10 @@
+# Imagens originais (site usa projetos/thumbs/ e projetos/large/)
+projetos/*.jpg
+projetos/*.png
+projetos/*.mp4
+
+# Backups com marca d'água removida
+projetos/originais-com-marca/
+
+# Imagens geradas pelo Gemini (não usadas no site)
+projetos/Gemini_Generated_Image_*.png
