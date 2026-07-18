@@ -152,7 +152,7 @@ a{text-decoration:none;color:inherit}
 /* HERO */
 .hero{position:relative;height:100svh;min-height:600px;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;background:var(--black)}
 .hero-bg{position:absolute;inset:0;z-index:0}
-.hero-bg img{width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.06);transition:opacity 1.2s var(--ease),transform 8s var(--ease-out)}
+.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center center;opacity:0;transform:scale(1.06);transition:opacity 1.2s var(--ease),transform 8s var(--ease-out)}
 .hero-bg img.loaded{opacity:.52;transform:scale(1)}
 .hero-content{position:relative;z-index:1;padding:0 1.5rem;max-width:880px}
 .hero-badge{display:inline-flex;align-items:center;gap:.5rem;font-size:.7rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.65);margin-bottom:1.75rem;border:1px solid rgba(255,255,255,.2);border-radius:980px;padding:.35rem .9rem;opacity:0;animation:fadeUp .8s .3s var(--ease-out) forwards}
@@ -337,7 +337,19 @@ footer{background:var(--black);color:rgba(255,255,255,.4);padding:3.5rem 3rem;di
   .nav-hamburger{display:flex}
   .services,.portfolio,.about,.process,.faq,.contact,.manifesto{padding:5rem 1.5rem}
   .services-grid{grid-template-columns:1fr}
-  .portfolio-grid{grid-template-columns:1fr;grid-auto-rows:220px}
+  /* Portfolio mobile: grid 2 colunas quadradas estilo Instagram */
+  .portfolio{padding:5rem 0.75rem}
+  .portfolio-grid{grid-template-columns:repeat(2,1fr);gap:.35rem;grid-auto-rows:180px}
+  .portfolio-item{border-radius:10px}
+  .portfolio-item.span2{grid-column:span 1}
+  .portfolio-filters{gap:.35rem}
+  .filter-btn{font-size:.7rem;padding:.35rem .8rem}
+  .portfolio-header{margin-bottom:1.5rem;padding:0 .75rem}
+  .portfolio-cta{padding:0 .75rem}
+  /* Hero scroll centralizado */
+  .hero-scroll{left:50%;transform:translateX(-50%);white-space:nowrap}
+  /* Hero image mobile: foca na parte central-esquerda */
+  .hero-bg img{object-position:35% center}
   .process-grid{grid-template-columns:1fr}
   .form-row{grid-template-columns:1fr}
   footer{flex-direction:column;align-items:flex-start;padding:2.5rem 1.5rem}
