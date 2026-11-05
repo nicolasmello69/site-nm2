@@ -2,7 +2,7 @@
   "trailingSlash": true,
   "redirects": [
     {
-      "source": "/:path*",
+      "source": "/:path*/",
       "has": [
         {
           "type": "host",
@@ -18,22 +18,22 @@
       "permanent": true
     },
     {
-      "source": "/sobre",
+      "source": "/sobre/",
       "destination": "https://www.nm2arquitetura.com.br/#sobre",
       "permanent": true
     },
     {
-      "source": "/execucao",
+      "source": "/execucao/",
       "destination": "https://www.nm2arquitetura.com.br/#processo",
       "permanent": true
     },
     {
-      "source": "/portfolio",
+      "source": "/portfolio/",
       "destination": "https://www.nm2arquitetura.com.br/#portfolio",
       "permanent": true
     },
     {
-      "source": "/contato",
+      "source": "/contato/",
       "destination": "https://www.nm2arquitetura.com.br/#contato",
       "permanent": true
     }
