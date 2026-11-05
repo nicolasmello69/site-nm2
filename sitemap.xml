@@ -1,26 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://www.nm2arquitetura.com.br/</loc>
-    <lastmod>2026-07-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-    <image:image>
-      <image:loc>https://www.nm2arquitetura.com.br/og-image.jpg</image:loc>
-      <image:title>NM2 Arquitetura — Projeto de sala e cozinha integradas em Maringá</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.nm2arquitetura.com.br/projetos/large/CASA%201.jpg</image:loc>
-      <image:title>Residência contemporânea em Maringá — NM2 Arquitetura</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.nm2arquitetura.com.br/projetos/large/EXTERIOR_4.jpg</image:loc>
-      <image:title>Área de lazer com piscina — NM2 Arquitetura Maringá</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.nm2arquitetura.com.br/projetos/large/SUITE%201_1.jpg</image:loc>
-      <image:title>Suíte master com painéis ripados — NM2 Arquitetura</image:title>
-    </image:image>
+    <loc>https://www.nm2arquitetura.com.br/</loc><lastmod>2026-11-05</lastmod>
+    <image:image><image:loc>https://www.nm2arquitetura.com.br/og-image.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.nm2arquitetura.com.br/projetos/large/CASA%201.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.nm2arquitetura.com.br/projetos/large/EXTERIOR_4.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.nm2arquitetura.com.br/projetos/large/SUITE%201_1.jpg</image:loc></image:image>
   </url>
+  <url><loc>https://www.nm2arquitetura.com.br/arquitetura-residencial-maringa/</loc><lastmod>2026-11-05</lastmod></url>
+  <url><loc>https://www.nm2arquitetura.com.br/arquitetura-comercial-maringa/</loc><lastmod>2026-11-05</lastmod></url>
 </urlset>

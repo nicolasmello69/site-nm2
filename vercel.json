@@ -1,0 +1,77 @@
+{
+  "trailingSlash": true,
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "site-nm2.vercel.app"
+        }
+      ],
+      "destination": "https://www.nm2arquitetura.com.br/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/index.html",
+      "destination": "https://www.nm2arquitetura.com.br/",
+      "permanent": true
+    },
+    {
+      "source": "/sobre",
+      "destination": "https://www.nm2arquitetura.com.br/#sobre",
+      "permanent": true
+    },
+    {
+      "source": "/execucao",
+      "destination": "https://www.nm2arquitetura.com.br/#processo",
+      "permanent": true
+    },
+    {
+      "source": "/portfolio",
+      "destination": "https://www.nm2arquitetura.com.br/#portfolio",
+      "permanent": true
+    },
+    {
+      "source": "/contato",
+      "destination": "https://www.nm2arquitetura.com.br/#contato",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self' 'sha256-43IbJvY0OOQIc53TZT5n3W3upCTYriPAxEWNYWsDxOk=' 'sha256-4GBnkIB61WK6jEKc916FtJ6dSjqzw1D6s70gSo2JDKI=' 'sha256-eUwRIhdie75iKRW3zT9cC8cRgUqeu6VIMmE0tkNWGAw=' 'sha256-vBdqFC8amZW2hGm8enMGIKax4tVPIPV+2rIaTOA5Zo0=' 'sha256-w9BKvXq5KL5bsbUZjecFBK2ZEyWrC7rXT1u3bTxUW6A='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; form-action https://wa.me; upgrade-insecure-requests"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=()"
+        }
+      ]
+    },
+    {
+      "source": "/404.html",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex"
+        }
+      ]
+    }
+  ]
+}

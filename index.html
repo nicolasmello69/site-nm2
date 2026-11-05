@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>NM2 Arquitetura | Escritório de Arquitetura em Maringá-PR</title>
 <meta name="description" content="NM2 Arquitetura — escritório de arquitetura em Maringá-PR especializado em projetos residenciais, comerciais, corporativos, design de interiores e fachadas.">
-<meta name="keywords" content="arquitetura Maringá, escritório de arquitetura Maringá, arquiteto Maringá, projeto residencial Maringá, design de interiores Maringá, NM2 Arquitetura">
+
 <meta name="author" content="NM2 Arquitetura — Nicolas Mello">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 <meta name="geo.region" content="BR-PR">
@@ -14,7 +14,7 @@
 <link rel="canonical" href="https://www.nm2arquitetura.com.br/">
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="preload" as="image" href="projetos/large/sala cozinha_1.jpg" fetchpriority="high">
+<link rel="preload" as="image" href="/assets/hero-1200.webp" imagesrcset="/assets/hero-720.webp 720w, /assets/hero-1200.webp 1200w, /assets/hero-1800.webp 1800w" imagesizes="100vw" fetchpriority="high">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="NM2 Arquitetura">
 <meta property="og:title" content="NM2 Arquitetura | Escritório de Arquitetura em Maringá-PR">
@@ -64,7 +64,6 @@
       "telephone": ["+55-44-99962-6215", "+55-44-99931-1909"],
       "email": "contato@nm2arquitetura.com.br",
       "address": {"@type": "PostalAddress", "addressLocality": "Maringá", "addressRegion": "PR", "addressCountry": "BR"},
-      "geo": {"@type": "GeoCoordinates", "latitude": -23.4205, "longitude": -51.9333},
       "areaServed": [
         {"@type": "City", "name": "Maringá"},
         {"@type": "City", "name": "Sarandi"},
@@ -109,7 +108,7 @@
       "@type": "FAQPage",
       "@id": "https://www.nm2arquitetura.com.br/#faq",
       "mainEntity": [
-        {"@type": "Question", "name": "Qual o melhor escritório de arquitetura em Maringá?", "acceptedAnswer": {"@type": "Answer", "text": "A NM2 Arquitetura é referência em projetos contemporâneos em Maringá-PR. Fundada pelo arquiteto Nicolas Mello, o escritório é reconhecido pela abordagem personalizada, estética contemporânea e entrega de projetos residenciais, comerciais e de interiores com alto padrão técnico e criativo."}},
+        {"@type": "Question", "name": "A NM2 desenvolve projetos residenciais e comerciais em Maringá?", "acceptedAnswer": {"@type": "Answer", "text": "Sim. A NM2 Arquitetura, fundada pelo arquiteto Nicolas Mello, desenvolve projetos residenciais, comerciais, corporativos e de interiores em Maringá e região. A proposta define as etapas, os entregáveis e os prazos de cada contratação."}},
         {"@type": "Question", "name": "Quanto custa um projeto de arquitetura em Maringá?", "acceptedAnswer": {"@type": "Answer", "text": "O valor varia conforme o tipo (residencial, comercial, interiores), a metragem e a complexidade do projeto. Entre em contato com a NM2 Arquitetura pelo WhatsApp (44) 99962-6215 para receber uma proposta personalizada sem compromisso."}},
         {"@type": "Question", "name": "A NM2 Arquitetura atende fora de Maringá?", "acceptedAnswer": {"@type": "Answer", "text": "Sim. A NM2 Arquitetura atende toda a região noroeste do Paraná, incluindo Sarandi, Paiçandu, Mandaguari, Marialva, Apucarana, Paranavaí e outras cidades."}},
         {"@type": "Question", "name": "Quanto tempo leva um projeto de arquitetura?", "acceptedAnswer": {"@type": "Answer", "text": "Projetos residenciais levam em média de 30 a 90 dias. Projetos comerciais e corporativos variam conforme o escopo. A NM2 Arquitetura define prazos claros já na etapa de briefing inicial."}},
@@ -152,7 +151,7 @@ a{text-decoration:none;color:inherit}
 /* HERO */
 .hero{position:relative;height:100svh;min-height:600px;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;background:var(--black)}
 .hero-bg{position:absolute;inset:0;z-index:0}
-.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center center;opacity:0;transform:scale(1.06);transition:opacity 1.2s var(--ease),transform 8s var(--ease-out)}
+.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center center;opacity:.52;transform:scale(1.06);transition:opacity 1.2s var(--ease),transform 8s var(--ease-out)}
 .hero-bg img.loaded{opacity:.52;transform:scale(1)}
 .hero-content{position:relative;z-index:1;padding:0 1.5rem;max-width:880px}
 .hero-badge{display:inline-flex;align-items:center;gap:.5rem;font-size:.7rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.65);margin-bottom:1.75rem;border:1px solid rgba(255,255,255,.2);border-radius:980px;padding:.35rem .9rem;opacity:0;animation:fadeUp .8s .3s var(--ease-out) forwards}
@@ -359,9 +358,54 @@ footer{background:var(--black);color:rgba(255,255,255,.4);padding:3.5rem 3rem;di
   .about-stats{grid-template-columns:1fr 1fr}
 }
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+
+html{scroll-padding-top:80px}
+:focus-visible{outline:3px solid #216a68;outline-offset:5px}
+.skip-link{position:fixed;top:8px;left:8px;z-index:3000;background:white;color:#111;padding:12px;transform:translateY(-160%)}
+.skip-link:focus{transform:none}
+.service-link{display:inline-block;margin-top:16px;color:#216a68;font-weight:600;text-decoration:underline;text-underline-offset:4px}
+.portfolio-item:focus-visible .portfolio-overlay{opacity:1}
+.lb-thumb{background:none;padding:0;flex-shrink:0;cursor:pointer}
+.lb-thumb img{width:100%;height:100%;object-fit:cover;border-radius:5px}
+.nav-hamburger{min-width:44px;min-height:44px;justify-content:center;align-items:center}
+.filter-btn{min-height:44px}
+.contact-form [disabled]{opacity:.65;cursor:wait}
+.form-note{font-size:.875rem;color:#505056;line-height:1.6}
+.form-note a{text-decoration:underline}
+.content-page{max-width:1100px;margin:0 auto;padding:108px 24px 64px}
+.content-page h1{font-size:clamp(2.2rem,5vw,4rem);letter-spacing:-.04em;line-height:1.1;margin:16px 0 24px}
+.content-page h2{font-size:clamp(1.55rem,3vw,2.2rem);letter-spacing:-.025em;margin:40px 0 16px}
+.content-page h3{font-size:1.2rem;margin-bottom:12px}
+.content-page p,.content-page li{line-height:1.8;color:#45454b}
+.content-page p{margin-bottom:16px;max-width:78ch}
+.content-page ul,.content-page ol{padding-left:24px;margin-bottom:24px}
+.content-page .eyebrow{color:#216a68;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase}
+.content-page .lead{font-size:1.15rem}
+.content-page .btn-primary{color:white;margin:12px 0}
+.content-page .cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.content-page .info-card{background:#f5f5f7;border-radius:20px;padding:28px}
+.content-page figure{margin:16px 0}
+.content-page figure img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:16px}
+.content-page figcaption{font-size:.875rem;line-height:1.6;color:#505056;padding-top:12px}
+.content-page .related{display:flex;gap:20px;flex-wrap:wrap;margin-top:32px}
+.content-page .related a{color:#216a68;text-decoration:underline}
+.content-page details{padding:20px 0;border-bottom:1px solid #ddd}
+.content-page summary{font-weight:600;cursor:pointer;line-height:1.6}
+.content-page details p{margin-top:12px}
+address{font-style:normal}
+.reveal{opacity:1;transform:none}
+.js-reveal .reveal{opacity:0;transform:translateY(30px)}
+.js-reveal .reveal.visible{opacity:1;transform:none}
+@media(max-width:768px){.content-page .cards{grid-template-columns:1fr}.content-page{padding-top:90px}.form-input,.form-select,.form-textarea{font-size:16px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.hero-title,.hero-sub,.hero-actions,.hero-badge,.hero-scroll,.reveal,.js-reveal .reveal{opacity:1!important;transform:none!important}.hero-bg img,.hero-bg img.loaded{opacity:.52;transform:none!important}}
+
+footer address{color:#d2d2d7;line-height:1.7}
+.btn-primary,.btn-nav,.filter-btn.active,.btn-submit{background:var(--teal-dark)}
+.content-page .related a,.content-page .service-link{color:#216a68}
 </style>
 </head>
 <body>
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
 <!-- NAV -->
 <nav class="nav" id="nav">
@@ -369,7 +413,7 @@ footer{background:var(--black);color:rgba(255,255,255,.4);padding:3.5rem 3rem;di
     <img src="NM2 LOGOMARCA ARQUITETURA.png" alt="NM2 Arquitetura" id="nav-logo-img">
   </a>
   <ul class="nav-links">
-    <li><a href="#servicos">Serviços</a></li>
+    <li><a href="/arquitetura-residencial-maringa/">Residencial</a></li><li><a href="/arquitetura-comercial-maringa/">Comercial</a></li>
     <li><a href="#portfolio">Portfólio</a></li>
     <li><a href="#sobre">Sobre</a></li>
     <li><a href="#faq">FAQ</a></li>
@@ -377,7 +421,7 @@ footer{background:var(--black);color:rgba(255,255,255,.4);padding:3.5rem 3rem;di
   </ul>
   <div style="display:flex;align-items:center;gap:1rem">
     <a href="https://wa.me/5544999626215?text=Ol%C3%A1%2C%20vim%20pelo%20site%20NM2%20e%20gostaria%20de%20um%20or%C3%A7amento" class="btn-nav" target="_blank" rel="noopener">Orçamento</a>
-    <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu">
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="Abrir menu" aria-controls="mobile-menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </div>
@@ -385,7 +429,7 @@ footer{background:var(--black);color:rgba(255,255,255,.4);padding:3.5rem 3rem;di
 
 <div class="mobile-menu" id="mobile-menu">
   <button class="mobile-close" id="mobile-close" aria-label="Fechar">✕</button>
-  <a href="#servicos" class="mobile-link">Serviços</a>
+  <a href="/arquitetura-residencial-maringa/" class="mobile-link">Residencial</a><a href="/arquitetura-comercial-maringa/" class="mobile-link">Comercial</a>
   <a href="#portfolio" class="mobile-link">Portfólio</a>
   <a href="#sobre" class="mobile-link">Sobre</a>
   <a href="#faq" class="mobile-link">FAQ</a>
@@ -393,14 +437,15 @@ footer{background:var(--black);color:rgba(255,255,255,.4);padding:3.5rem 3rem;di
   <a href="https://wa.me/5544999626215?text=Ol%C3%A1%2C%20vim%20pelo%20site%20NM2%20e%20gostaria%20de%20um%20or%C3%A7amento" class="btn-primary" target="_blank" rel="noopener" style="margin-top:1rem">Solicitar Orçamento</a>
 </div>
 
+<main id="conteudo" tabindex="-1">
 <!-- HERO -->
 <section class="hero" id="inicio">
   <div class="hero-bg">
-    <img src="projetos/large/sala cozinha_1.jpg" alt="Projeto NM2 Arquitetura — sala e cozinha integradas" id="hero-img" loading="eager">
+    <img src="/assets/hero-1200.webp" srcset="/assets/hero-720.webp 720w, /assets/hero-1200.webp 1200w, /assets/hero-1800.webp 1800w" sizes="100vw" width="1200" height="1200" fetchpriority="high" alt="Projeto NM2 Arquitetura — sala e cozinha integradas" id="hero-img" loading="eager">
   </div>
   <div class="hero-content">
     <span class="hero-badge">Arquitetura em Maringá · PR</span>
-    <h1 class="hero-title">Espaços que <strong>transformam</strong><br>quem vive neles</h1>
+    <h1 class="hero-title">Arquitetura em <strong>Maringá</strong></h1>
     <p class="hero-sub">Projetos residenciais, comerciais e de interiores com estética contemporânea, funcionalidade e identidade — em Maringá e toda a região.</p>
     <div class="hero-actions">
       <a href="https://wa.me/5544999626215?text=Ol%C3%A1%2C%20vim%20pelo%20site%20NM2%20e%20gostaria%20de%20um%20or%C3%A7amento" class="btn-primary" target="_blank" rel="noopener">
@@ -433,11 +478,13 @@ footer{background:var(--black);color:rgba(255,255,255,.4);padding:3.5rem 3rem;di
       <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
       <h3 class="service-name">Projeto Residencial</h3>
       <p class="service-desc">Casas e apartamentos projetados com linhas limpas, integração de espaços e aproveitamento inteligente da luz natural.</p>
+      <a class="service-link" href="/arquitetura-residencial-maringa/">Conheça o projeto residencial em Maringá</a>
     </article>
     <article class="service-card reveal reveal-delay-2">
       <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
       <h3 class="service-name">Projeto Comercial</h3>
       <p class="service-desc">Lojas e restaurantes que comunicam a identidade da marca e otimizam a experiência do cliente.</p>
+      <a class="service-link" href="/arquitetura-comercial-maringa/">Conheça o projeto comercial em Maringá</a>
     </article>
     <article class="service-card reveal reveal-delay-3">
       <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
@@ -479,141 +526,141 @@ footer{background:var(--black);color:rgba(255,255,255,.4);padding:3.5rem 3rem;di
   </div>
   <div class="portfolio-grid" id="portfolio-grid">
     <!-- ── Destaques (visíveis) ── -->
-    <div class="portfolio-item span2 reveal" data-cat="interior">
-      <img src="projetos/thumbs/sala cozinha_1.jpg" data-full="projetos/large/sala cozinha_1.jpg" alt="Sala e cozinha integradas — NM2 Arquitetura Maringá" loading="lazy">
+    <div role="button" tabindex="0" aria-haspopup="dialog" class="portfolio-item span2 reveal" data-cat="interior">
+      <img src="/assets/thumb-28b786b1b2bf.webp" width="720" height="405" decoding="async" data-full="projetos/large/sala cozinha_1.jpg" alt="Sala e cozinha integradas — NM2 Arquitetura Maringá" loading="lazy">
       <div class="portfolio-overlay"><div class="portfolio-info"><p class="portfolio-cat">Interiores · Maringá-PR</p><p class="portfolio-name">Sala & Cozinha Integradas</p></div></div>
     </div>
-    <div class="portfolio-item reveal reveal-delay-1" data-cat="residencial">
-      <img src="projetos/thumbs/CASA 1.jpg" data-full="projetos/large/CASA 1.jpg" alt="Residência contemporânea — NM2 Arquitetura Maringá" loading="lazy">
+    <div role="button" tabindex="0" aria-haspopup="dialog" class="portfolio-item reveal reveal-delay-1" data-cat="residencial">
+      <img src="/assets/thumb-e3353e7e696f.webp" width="720" height="720" decoding="async" data-full="projetos/large/CASA 1.jpg" alt="Residência contemporânea — NM2 Arquitetura Maringá" loading="lazy">
       <div class="portfolio-overlay"><div class="portfolio-info"><p class="portfolio-cat">Residencial · Maringá-PR</p><p class="portfolio-name">Residência Contemporânea</p></div></div>
     </div>
-    <div class="portfolio-item reveal reveal-delay-2" data-cat="interior">
-      <img src="projetos/thumbs/SUITE 1_1.jpg" data-full="projetos/large/SUITE 1_1.jpg" alt="Suíte master com painéis ripados — NM2 Arquitetura" loading="lazy">
+    <div role="button" tabindex="0" aria-haspopup="dialog" class="portfolio-item reveal reveal-delay-2" data-cat="interior">
+      <img src="/assets/thumb-a31efd78d952.webp" width="720" height="405" decoding="async" data-full="projetos/large/SUITE 1_1.jpg" alt="Suíte master com painéis ripados — NM2 Arquitetura" loading="lazy">
       <div class="portfolio-overlay"><div class="portfolio-info"><p class="portfolio-cat">Interiores</p><p class="portfolio-name">Suíte Master</p></div></div>
     </div>
-    <div class="portfolio-item reveal reveal-delay-3" data-cat="interior">
-      <img src="projetos/thumbs/ACADEMIA FEED_1.jpg" data-full="projetos/large/ACADEMIA FEED_1.jpg" alt="Academia privativa — NM2 Arquitetura" loading="lazy">
+    <div role="button" tabindex="0" aria-haspopup="dialog" class="portfolio-item reveal reveal-delay-3" data-cat="interior">
+      <img src="/assets/thumb-f2229b61ee9a.webp" width="720" height="720" decoding="async" data-full="projetos/large/ACADEMIA FEED_1.jpg" alt="Academia privativa — NM2 Arquitetura" loading="lazy">
       <div class="portfolio-overlay"><div class="portfolio-info"><p class="portfolio-cat">Interiores</p><p class="portfolio-name">Academia Privativa</p></div></div>
     </div>
-    <div class="portfolio-item span2 reveal reveal-delay-1" data-cat="externo">
-      <img src="projetos/thumbs/EXTERIOR_4.jpg" data-full="projetos/large/EXTERIOR_4.jpg" alt="Área externa com piscina — NM2 Arquitetura Maringá" loading="lazy">
+    <div role="button" tabindex="0" aria-haspopup="dialog" class="portfolio-item span2 reveal reveal-delay-1" data-cat="externo">
+      <img src="/assets/thumb-19278ebfa5de.webp" width="720" height="405" decoding="async" data-full="projetos/large/EXTERIOR_4.jpg" alt="Área externa com piscina — NM2 Arquitetura Maringá" loading="lazy">
       <div class="portfolio-overlay"><div class="portfolio-info"><p class="portfolio-cat">Área Externa · Maringá-PR</p><p class="portfolio-name">Espaço de Lazer com Piscina</p></div></div>
     </div>
-    <div class="portfolio-item reveal reveal-delay-2" data-cat="interior">
-      <img src="projetos/thumbs/ESPAÇO GOURMET_1.jpg" data-full="projetos/large/ESPAÇO GOURMET_1.jpg" alt="Espaço gourmet com forno a lenha — NM2 Arquitetura" loading="lazy">
+    <div role="button" tabindex="0" aria-haspopup="dialog" class="portfolio-item reveal reveal-delay-2" data-cat="interior">
+      <img src="/assets/thumb-122715c86a98.webp" width="720" height="405" decoding="async" data-full="projetos/large/ESPAÇO GOURMET_1.jpg" alt="Espaço gourmet com forno a lenha — NM2 Arquitetura" loading="lazy">
       <div class="portfolio-overlay"><div class="portfolio-info"><p class="portfolio-cat">Interiores</p><p class="portfolio-name">Espaço Gourmet</p></div></div>
     </div>
-    <div class="portfolio-item reveal reveal-delay-3" data-cat="residencial">
-      <img src="projetos/thumbs/BAR MOLHADO_1.jpg" data-full="projetos/large/BAR MOLHADO_1.jpg" alt="Bar gourmet com churrasqueira — NM2 Arquitetura" loading="lazy">
+    <div role="button" tabindex="0" aria-haspopup="dialog" class="portfolio-item reveal reveal-delay-3" data-cat="residencial">
+      <img src="/assets/thumb-4eb51526e6c6.webp" width="720" height="405" decoding="async" data-full="projetos/large/BAR MOLHADO_1.jpg" alt="Bar gourmet com churrasqueira — NM2 Arquitetura" loading="lazy">
       <div class="portfolio-overlay"><div class="portfolio-info"><p class="portfolio-cat">Residencial</p><p class="portfolio-name">Bar Gourmet</p></div></div>
     </div>
-    <div class="portfolio-item reveal reveal-delay-1" data-cat="interior">
-      <img src="projetos/thumbs/sala cozinha_5.jpg" data-full="projetos/large/sala cozinha_5.jpg" alt="Living premium — NM2 Arquitetura" loading="lazy">
+    <div role="button" tabindex="0" aria-haspopup="dialog" class="portfolio-item reveal reveal-delay-1" data-cat="interior">
+      <img src="/assets/thumb-7f5c8c7b73b2.webp" width="720" height="405" decoding="async" data-full="projetos/large/sala cozinha_5.jpg" alt="Living premium — NM2 Arquitetura" loading="lazy">
       <div class="portfolio-overlay"><div class="portfolio-info"><p class="portfolio-cat">Interiores</p><p class="portfolio-name">Living Premium</p></div></div>
     </div>
-    <div class="portfolio-item reveal reveal-delay-2" data-cat="residencial">
-      <img src="projetos/thumbs/CASA 2.jpg" data-full="projetos/large/CASA 2.jpg" alt="Casa térrea moderna — NM2 Arquitetura Maringá" loading="lazy">
+    <div role="button" tabindex="0" aria-haspopup="dialog" class="portfolio-item reveal reveal-delay-2" data-cat="residencial">
+      <img src="/assets/thumb-35fca4d6a359.webp" width="720" height="720" decoding="async" data-full="projetos/large/CASA 2.jpg" alt="Casa térrea moderna — NM2 Arquitetura Maringá" loading="lazy">
       <div class="portfolio-overlay"><div class="portfolio-info"><p class="portfolio-cat">Residencial · Maringá-PR</p><p class="portfolio-name">Casa Térrea Moderna</p></div></div>
     </div>
-    <div class="portfolio-item reveal reveal-delay-3" data-cat="externo">
-      <img src="projetos/thumbs/EXTERIOR_7.jpg" data-full="projetos/large/EXTERIOR_7.jpg" alt="Deck e piscina — NM2 Arquitetura" loading="lazy">
+    <div role="button" tabindex="0" aria-haspopup="dialog" class="portfolio-item reveal reveal-delay-3" data-cat="externo">
+      <img src="/assets/thumb-e142bc3a1020.webp" width="720" height="405" decoding="async" data-full="projetos/large/EXTERIOR_7.jpg" alt="Deck e piscina — NM2 Arquitetura" loading="lazy">
       <div class="portfolio-overlay"><div class="portfolio-info"><p class="portfolio-cat">Área Externa</p><p class="portfolio-name">Deck & Piscina</p></div></div>
     </div>
-    <div class="portfolio-item reveal reveal-delay-1" data-cat="residencial">
-      <img src="projetos/thumbs/escritorio frontal_1.jpg" data-full="projetos/large/escritorio frontal_1.jpg" alt="Home office residencial — NM2 Arquitetura Maringá" loading="lazy">
+    <div role="button" tabindex="0" aria-haspopup="dialog" class="portfolio-item reveal reveal-delay-1" data-cat="residencial">
+      <img src="/assets/thumb-fa385697a732.webp" width="720" height="405" decoding="async" data-full="projetos/large/escritorio frontal_1.jpg" alt="Home office residencial — NM2 Arquitetura Maringá" loading="lazy">
       <div class="portfolio-overlay"><div class="portfolio-info"><p class="portfolio-cat">Residencial · Maringá-PR</p><p class="portfolio-name">Home Office</p></div></div>
     </div>
-    <div class="portfolio-item reveal reveal-delay-2" data-cat="interior">
-      <img src="projetos/thumbs/SUITE 2_1.jpg" data-full="projetos/large/SUITE 2_1.jpg" alt="Suíte casal — NM2 Arquitetura" loading="lazy">
+    <div role="button" tabindex="0" aria-haspopup="dialog" class="portfolio-item reveal reveal-delay-2" data-cat="interior">
+      <img src="/assets/thumb-9dff18ae0ecf.webp" width="720" height="405" decoding="async" data-full="projetos/large/SUITE 2_1.jpg" alt="Suíte casal — NM2 Arquitetura" loading="lazy">
       <div class="portfolio-overlay"><div class="portfolio-info"><p class="portfolio-cat">Interiores</p><p class="portfolio-name">Suíte Casal</p></div></div>
     </div>
     <!-- ── Extras (revelados com "Ver mais") ── -->
-    <div class="portfolio-item reveal" data-cat="residencial">
-      <img src="projetos/thumbs/CASA 3.jpg" data-full="projetos/large/CASA 3.jpg" alt="Residência com pé-direito duplo — NM2 Arquitetura" loading="lazy">
+    <div role="button" tabindex="0" aria-haspopup="dialog" class="portfolio-item reveal" data-cat="residencial">
+      <img src="/assets/thumb-40aa99d06d79.webp" width="720" height="720" decoding="async" data-full="projetos/large/CASA 3.jpg" alt="Residência com pé-direito duplo — NM2 Arquitetura" loading="lazy">
       <div class="portfolio-overlay"><div class="portfolio-info"><p class="portfolio-cat">Residencial</p><p class="portfolio-name">Residência Pé-Direito Duplo</p></div></div>
     </div>
-    <div class="portfolio-item reveal" data-cat="residencial">
-      <img src="projetos/thumbs/CASA 4.jpg" data-full="projetos/large/CASA 4.jpg" alt="Casa minimalista — NM2 Arquitetura Maringá" loading="lazy">
+    <div role="button" tabindex="0" aria-haspopup="dialog" class="portfolio-item reveal" data-cat="residencial">
+      <img src="/assets/thumb-871edef6d68a.webp" width="720" height="720" decoding="async" data-full="projetos/large/CASA 4.jpg" alt="Casa minimalista — NM2 Arquitetura Maringá" loading="lazy">
       <div class="portfolio-overlay"><div class="portfolio-info"><p class="portfolio-cat">Residencial</p><p class="portfolio-name">Casa Minimalista</p></div></div>
     </div>
-    <div class="portfolio-item reveal" data-cat="residencial">
-      <img src="projetos/thumbs/CASA 5.jpg" data-full="projetos/large/CASA 5.jpg" alt="Residência urbana — NM2 Arquitetura" loading="lazy">
+    <div role="button" tabindex="0" aria-haspopup="dialog" class="portfolio-item reveal" data-cat="residencial">
+      <img src="/assets/thumb-7de6bc914a8e.webp" width="720" height="720" decoding="async" data-full="projetos/large/CASA 5.jpg" alt="Residência urbana — NM2 Arquitetura" loading="lazy">
       <div class="portfolio-overlay"><div class="portfolio-info"><p class="portfolio-cat">Residencial</p><p class="portfolio-name">Residência Urbana</p></div></div>
     </div>
-    <div class="portfolio-item reveal" data-cat="residencial">
-      <img src="projetos/thumbs/CASA 6.jpg" data-full="projetos/large/CASA 6.jpg" alt="Casa com fachada em brise — NM2 Arquitetura" loading="lazy">
+    <div role="button" tabindex="0" aria-haspopup="dialog" class="portfolio-item reveal" data-cat="residencial">
+      <img src="/assets/thumb-f2ac03fc857b.webp" width="720" height="720" decoding="async" data-full="projetos/large/CASA 6.jpg" alt="Casa com fachada em brise — NM2 Arquitetura" loading="lazy">
       <div class="portfolio-overlay"><div class="portfolio-info"><p class="portfolio-cat">Residencial</p><p class="portfolio-name">Casa com Brise</p></div></div>
     </div>
-    <div class="portfolio-item reveal span2" data-cat="interior">
-      <img src="projetos/thumbs/sala cozinha_10.jpg" data-full="projetos/large/sala cozinha_10.jpg" alt="Cozinha sob medida — NM2 Arquitetura" loading="lazy">
+    <div role="button" tabindex="0" aria-haspopup="dialog" class="portfolio-item reveal span2" data-cat="interior">
+      <img src="/assets/thumb-2ad2f2e1eb53.webp" width="720" height="405" decoding="async" data-full="projetos/large/sala cozinha_10.jpg" alt="Cozinha sob medida — NM2 Arquitetura" loading="lazy">
       <div class="portfolio-overlay"><div class="portfolio-info"><p class="portfolio-cat">Interiores</p><p class="portfolio-name">Cozinha Sob Medida</p></div></div>
     </div>
-    <div class="portfolio-item reveal" data-cat="interior">
-      <img src="projetos/thumbs/sala cozinha_14.jpg" data-full="projetos/large/sala cozinha_14.jpg" alt="Estar e jantar integrados — NM2 Arquitetura" loading="lazy">
+    <div role="button" tabindex="0" aria-haspopup="dialog" class="portfolio-item reveal" data-cat="interior">
+      <img src="/assets/thumb-296e6cd04646.webp" width="720" height="405" decoding="async" data-full="projetos/large/sala cozinha_14.jpg" alt="Estar e jantar integrados — NM2 Arquitetura" loading="lazy">
       <div class="portfolio-overlay"><div class="portfolio-info"><p class="portfolio-cat">Interiores</p><p class="portfolio-name">Estar & Jantar</p></div></div>
     </div>
-    <div class="portfolio-item reveal" data-cat="interior">
-      <img src="projetos/thumbs/sala cozinha_18.jpg" data-full="projetos/large/sala cozinha_18.jpg" alt="Sala de estar contemporânea — NM2 Arquitetura" loading="lazy">
+    <div role="button" tabindex="0" aria-haspopup="dialog" class="portfolio-item reveal" data-cat="interior">
+      <img src="/assets/thumb-da22ddbd2ce4.webp" width="720" height="405" decoding="async" data-full="projetos/large/sala cozinha_18.jpg" alt="Sala de estar contemporânea — NM2 Arquitetura" loading="lazy">
       <div class="portfolio-overlay"><div class="portfolio-info"><p class="portfolio-cat">Interiores</p><p class="portfolio-name">Sala Contemporânea</p></div></div>
     </div>
-    <div class="portfolio-item reveal" data-cat="interior">
-      <img src="projetos/thumbs/SUITE 1_16.jpg" data-full="projetos/large/SUITE 1_16.jpg" alt="Detalhe suíte master — NM2 Arquitetura" loading="lazy">
+    <div role="button" tabindex="0" aria-haspopup="dialog" class="portfolio-item reveal" data-cat="interior">
+      <img src="/assets/thumb-ab1112d05835.webp" width="720" height="405" decoding="async" data-full="projetos/large/SUITE 1_16.jpg" alt="Detalhe suíte master — NM2 Arquitetura" loading="lazy">
       <div class="portfolio-overlay"><div class="portfolio-info"><p class="portfolio-cat">Interiores</p><p class="portfolio-name">Suíte Master · Detalhe</p></div></div>
     </div>
-    <div class="portfolio-item reveal" data-cat="interior">
-      <img src="projetos/thumbs/SUITE 2_10.jpg" data-full="projetos/large/SUITE 2_10.jpg" alt="Suíte casal ângulo 2 — NM2 Arquitetura" loading="lazy">
+    <div role="button" tabindex="0" aria-haspopup="dialog" class="portfolio-item reveal" data-cat="interior">
+      <img src="/assets/thumb-2875e6c267dc.webp" width="720" height="405" decoding="async" data-full="projetos/large/SUITE 2_10.jpg" alt="Suíte casal ângulo 2 — NM2 Arquitetura" loading="lazy">
       <div class="portfolio-overlay"><div class="portfolio-info"><p class="portfolio-cat">Interiores</p><p class="portfolio-name">Suíte Casal · Vista 2</p></div></div>
     </div>
-    <div class="portfolio-item reveal" data-cat="interior">
-      <img src="projetos/thumbs/SUITE 3_2.jpg" data-full="projetos/large/SUITE 3_2.jpg" alt="Suíte hóspedes — NM2 Arquitetura" loading="lazy">
+    <div role="button" tabindex="0" aria-haspopup="dialog" class="portfolio-item reveal" data-cat="interior">
+      <img src="/assets/thumb-af77209a36b2.webp" width="720" height="405" decoding="async" data-full="projetos/large/SUITE 3_2.jpg" alt="Suíte hóspedes — NM2 Arquitetura" loading="lazy">
       <div class="portfolio-overlay"><div class="portfolio-info"><p class="portfolio-cat">Interiores</p><p class="portfolio-name">Suíte Hóspedes</p></div></div>
     </div>
-    <div class="portfolio-item reveal" data-cat="interior">
-      <img src="projetos/thumbs/SUITE 4_5.jpg" data-full="projetos/large/SUITE 4_5.jpg" alt="Suíte jovem — NM2 Arquitetura" loading="lazy">
+    <div role="button" tabindex="0" aria-haspopup="dialog" class="portfolio-item reveal" data-cat="interior">
+      <img src="/assets/thumb-e764dfd9b86a.webp" width="720" height="405" decoding="async" data-full="projetos/large/SUITE 4_5.jpg" alt="Suíte jovem — NM2 Arquitetura" loading="lazy">
       <div class="portfolio-overlay"><div class="portfolio-info"><p class="portfolio-cat">Interiores</p><p class="portfolio-name">Suíte Jovem</p></div></div>
     </div>
-    <div class="portfolio-item reveal span2" data-cat="interior">
-      <img src="projetos/thumbs/ESPAÇO GOURMET_11.jpg" data-full="projetos/large/ESPAÇO GOURMET_11.jpg" alt="Área de jantar do espaço gourmet — NM2 Arquitetura" loading="lazy">
+    <div role="button" tabindex="0" aria-haspopup="dialog" class="portfolio-item reveal span2" data-cat="interior">
+      <img src="/assets/thumb-8d9a0dcb23d8.webp" width="720" height="405" decoding="async" data-full="projetos/large/ESPAÇO GOURMET_11.jpg" alt="Área de jantar do espaço gourmet — NM2 Arquitetura" loading="lazy">
       <div class="portfolio-overlay"><div class="portfolio-info"><p class="portfolio-cat">Interiores</p><p class="portfolio-name">Gourmet · Área de Jantar</p></div></div>
     </div>
-    <div class="portfolio-item reveal" data-cat="interior">
-      <img src="projetos/thumbs/ESPAÇO GOURMET_23.jpg" data-full="projetos/large/ESPAÇO GOURMET_23.jpg" alt="Lounge do espaço gourmet — NM2 Arquitetura" loading="lazy">
+    <div role="button" tabindex="0" aria-haspopup="dialog" class="portfolio-item reveal" data-cat="interior">
+      <img src="/assets/thumb-9786f7d1f41b.webp" width="720" height="405" decoding="async" data-full="projetos/large/ESPAÇO GOURMET_23.jpg" alt="Lounge do espaço gourmet — NM2 Arquitetura" loading="lazy">
       <div class="portfolio-overlay"><div class="portfolio-info"><p class="portfolio-cat">Interiores</p><p class="portfolio-name">Gourmet · Lounge</p></div></div>
     </div>
-    <div class="portfolio-item reveal" data-cat="interior">
-      <img src="projetos/thumbs/ACADEMIA FEED_3.jpg" data-full="projetos/large/ACADEMIA FEED_3.jpg" alt="Studio de yoga — NM2 Arquitetura" loading="lazy">
+    <div role="button" tabindex="0" aria-haspopup="dialog" class="portfolio-item reveal" data-cat="interior">
+      <img src="/assets/thumb-aa2b123c658c.webp" width="720" height="720" decoding="async" data-full="projetos/large/ACADEMIA FEED_3.jpg" alt="Studio de yoga — NM2 Arquitetura" loading="lazy">
       <div class="portfolio-overlay"><div class="portfolio-info"><p class="portfolio-cat">Interiores</p><p class="portfolio-name">Studio Wellness</p></div></div>
     </div>
-    <div class="portfolio-item reveal" data-cat="interior">
-      <img src="projetos/thumbs/LAVABO 1_8.jpg" data-full="projetos/large/LAVABO 1_8.jpg" alt="Lavabo elegante — NM2 Arquitetura" loading="lazy">
+    <div role="button" tabindex="0" aria-haspopup="dialog" class="portfolio-item reveal" data-cat="interior">
+      <img src="/assets/thumb-5ba8f5df34b5.webp" width="720" height="405" decoding="async" data-full="projetos/large/LAVABO 1_8.jpg" alt="Lavabo elegante — NM2 Arquitetura" loading="lazy">
       <div class="portfolio-overlay"><div class="portfolio-info"><p class="portfolio-cat">Interiores</p><p class="portfolio-name">Lavabo Elegante</p></div></div>
     </div>
-    <div class="portfolio-item reveal" data-cat="interior">
-      <img src="projetos/thumbs/LAVANDERIA ultima opção_7.jpg" data-full="projetos/large/LAVANDERIA ultima opção_7.jpg" alt="Lavanderia planejada — NM2 Arquitetura" loading="lazy">
+    <div role="button" tabindex="0" aria-haspopup="dialog" class="portfolio-item reveal" data-cat="interior">
+      <img src="/assets/thumb-769fa5a78ade.webp" width="720" height="405" decoding="async" data-full="projetos/large/LAVANDERIA ultima opção_7.jpg" alt="Lavanderia planejada — NM2 Arquitetura" loading="lazy">
       <div class="portfolio-overlay"><div class="portfolio-info"><p class="portfolio-cat">Interiores</p><p class="portfolio-name">Lavanderia Planejada</p></div></div>
     </div>
-    <div class="portfolio-item reveal" data-cat="externo">
-      <img src="projetos/thumbs/EXTERIOR_5.jpg" data-full="projetos/large/EXTERIOR_5.jpg" alt="Área de lazer — NM2 Arquitetura" loading="lazy">
+    <div role="button" tabindex="0" aria-haspopup="dialog" class="portfolio-item reveal" data-cat="externo">
+      <img src="/assets/thumb-572d0c164e6a.webp" width="720" height="405" decoding="async" data-full="projetos/large/EXTERIOR_5.jpg" alt="Área de lazer — NM2 Arquitetura" loading="lazy">
       <div class="portfolio-overlay"><div class="portfolio-info"><p class="portfolio-cat">Área Externa</p><p class="portfolio-name">Área de Lazer</p></div></div>
     </div>
-    <div class="portfolio-item reveal" data-cat="externo">
-      <img src="projetos/thumbs/EXTERIOR_9.jpg" data-full="projetos/large/EXTERIOR_9.jpg" alt="Paisagismo — NM2 Arquitetura" loading="lazy">
+    <div role="button" tabindex="0" aria-haspopup="dialog" class="portfolio-item reveal" data-cat="externo">
+      <img src="/assets/thumb-9873958efbcb.webp" width="720" height="405" decoding="async" data-full="projetos/large/EXTERIOR_9.jpg" alt="Paisagismo — NM2 Arquitetura" loading="lazy">
       <div class="portfolio-overlay"><div class="portfolio-info"><p class="portfolio-cat">Área Externa</p><p class="portfolio-name">Paisagismo & Convivência</p></div></div>
     </div>
-    <div class="portfolio-item reveal" data-cat="externo">
-      <img src="projetos/thumbs/EXTERIOR_10.jpg" data-full="projetos/large/EXTERIOR_10.jpg" alt="Fachada e área externa — NM2 Arquitetura" loading="lazy">
+    <div role="button" tabindex="0" aria-haspopup="dialog" class="portfolio-item reveal" data-cat="externo">
+      <img src="/assets/thumb-4a4a7d0b4c65.webp" width="720" height="405" decoding="async" data-full="projetos/large/EXTERIOR_10.jpg" alt="Fachada e área externa — NM2 Arquitetura" loading="lazy">
       <div class="portfolio-overlay"><div class="portfolio-info"><p class="portfolio-cat">Área Externa</p><p class="portfolio-name">Convivência Externa</p></div></div>
     </div>
-    <div class="portfolio-item reveal" data-cat="externo">
-      <img src="projetos/thumbs/lavabo piscina instagram_1.jpg" data-full="projetos/large/lavabo piscina instagram_1.jpg" alt="Lavabo da piscina — NM2 Arquitetura" loading="lazy">
+    <div role="button" tabindex="0" aria-haspopup="dialog" class="portfolio-item reveal" data-cat="externo">
+      <img src="/assets/thumb-aa4bbb083032.webp" width="720" height="720" decoding="async" data-full="projetos/large/lavabo piscina instagram_1.jpg" alt="Lavabo da piscina — NM2 Arquitetura" loading="lazy">
       <div class="portfolio-overlay"><div class="portfolio-info"><p class="portfolio-cat">Área Externa</p><p class="portfolio-name">Lavabo da Piscina</p></div></div>
     </div>
-    <div class="portfolio-item reveal" data-cat="residencial">
-      <img src="projetos/thumbs/BAR MOLHADO_4.jpg" data-full="projetos/large/BAR MOLHADO_4.jpg" alt="Bar gourmet vista frontal — NM2 Arquitetura" loading="lazy">
+    <div role="button" tabindex="0" aria-haspopup="dialog" class="portfolio-item reveal" data-cat="residencial">
+      <img src="/assets/thumb-cfeea9fc6e8e.webp" width="720" height="405" decoding="async" data-full="projetos/large/BAR MOLHADO_4.jpg" alt="Bar gourmet vista frontal — NM2 Arquitetura" loading="lazy">
       <div class="portfolio-overlay"><div class="portfolio-info"><p class="portfolio-cat">Residencial</p><p class="portfolio-name">Bar · Vista Frontal</p></div></div>
     </div>
-    <div class="portfolio-item reveal" data-cat="residencial">
-      <img src="projetos/thumbs/escritorio frontal_4.jpg" data-full="projetos/large/escritorio frontal_4.jpg" alt="Home office residencial — vista complementar — NM2 Arquitetura" loading="lazy">
+    <div role="button" tabindex="0" aria-haspopup="dialog" class="portfolio-item reveal" data-cat="residencial">
+      <img src="/assets/thumb-66aba023d3ea.webp" width="720" height="405" decoding="async" data-full="projetos/large/escritorio frontal_4.jpg" alt="Home office residencial — vista complementar — NM2 Arquitetura" loading="lazy">
       <div class="portfolio-overlay"><div class="portfolio-info"><p class="portfolio-cat">Residencial</p><p class="portfolio-name">Home Office · Vista Complementar</p></div></div>
     </div>
   </div>
@@ -629,7 +676,7 @@ footer{background:var(--black);color:rgba(255,255,255,.4);padding:3.5rem 3rem;di
 <section class="about" id="sobre">
   <div class="about-grid">
     <div class="about-img-wrap reveal">
-      <img class="about-img" src="PERFIL QUADRADO.png" alt="Nicolas Mello — Arquiteto e fundador da NM2 Arquitetura Maringá" loading="lazy">
+      <img class="about-img" src="/assets/nicolas-mello.webp" width="768" height="768" alt="Nicolas Mello — Arquiteto e fundador da NM2 Arquitetura Maringá" loading="lazy">
       <div class="about-badge">
         <p class="about-badge-name">Nicolas Mello</p>
         <p class="about-badge-role">Arquiteto &amp; Fundador · NM2 Arquitetura</p>
@@ -690,8 +737,8 @@ footer{background:var(--black);color:rgba(255,255,255,.4);padding:3.5rem 3rem;di
     <h2 class="section-title reveal reveal-delay-1" style="text-align:center;margin-bottom:.75rem">Tem alguma <strong>dúvida?</strong></h2>
     <p class="section-sub reveal reveal-delay-2" style="text-align:center;margin:0 auto 3rem">Respondemos as perguntas mais comuns sobre arquitetura em Maringá.</p>
     <div class="faq-item reveal">
-      <button class="faq-q" aria-expanded="false">Qual o melhor escritório de arquitetura em Maringá?<div class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
-      <div class="faq-a">A NM2 Arquitetura é referência em projetos contemporâneos em Maringá-PR. Fundada pelo arquiteto Nicolas Mello, o escritório é reconhecido pela abordagem personalizada, estética contemporânea e entrega de projetos residenciais, comerciais e de interiores com alto padrão técnico e criativo.</div>
+      <button class="faq-q" aria-expanded="false">A NM2 desenvolve projetos residenciais e comerciais em Maringá?<div class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+      <div class="faq-a">Sim. A NM2 Arquitetura, fundada pelo arquiteto Nicolas Mello, desenvolve projetos residenciais, comerciais, corporativos e de interiores em Maringá e região. A proposta define as etapas, os entregáveis e os prazos de cada contratação.</div>
     </div>
     <div class="faq-item reveal reveal-delay-1">
       <button class="faq-q" aria-expanded="false">Quanto custa um projeto de arquitetura em Maringá?<div class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
@@ -739,24 +786,24 @@ footer{background:var(--black);color:rgba(255,255,255,.4);padding:3.5rem 3rem;di
         <a href="https://wa.me/5544999626215?text=Ol%C3%A1%2C%20vim%20pelo%20site%20NM2%20e%20gostaria%20de%20um%20or%C3%A7amento" class="social-btn" target="_blank" rel="noopener">WhatsApp</a>
       </div>
     </div>
-    <form class="contact-form reveal reveal-delay-2" id="contact-form" novalidate>
+    <form class="contact-form reveal reveal-delay-2" id="contact-form" action="https://wa.me/5544999626215" method="get">
       <div class="form-row">
         <div class="form-group">
           <label class="form-label" for="nome">Nome</label>
-          <input class="form-input" type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+          <input class="form-input" type="text" id="nome" autocomplete="name" maxlength="120" placeholder="Seu nome completo" required>
         </div>
         <div class="form-group">
           <label class="form-label" for="tel">Telefone</label>
-          <input class="form-input" type="tel" id="tel" name="tel" placeholder="(44) 99999-0000">
+          <input class="form-input" type="tel" id="tel" autocomplete="tel" maxlength="40" placeholder="(44) 99999-0000">
         </div>
       </div>
       <div class="form-group">
-        <label class="form-label" for="email">E-mail</label>
-        <input class="form-input" type="email" id="email" name="email" placeholder="seu@email.com" required>
+        <label class="form-label" for="email">E-mail (opcional)</label>
+        <input class="form-input" type="email" id="email" autocomplete="email" maxlength="254" placeholder="seu@email.com (opcional)">
       </div>
       <div class="form-group">
         <label class="form-label" for="tipo">Tipo de projeto</label>
-        <select class="form-select form-input" id="tipo" name="tipo">
+        <select class="form-select form-input" id="tipo">
           <option value="">Selecione o serviço</option>
           <option>Projeto Residencial</option>
           <option>Projeto Comercial</option>
@@ -769,21 +816,22 @@ footer{background:var(--black);color:rgba(255,255,255,.4);padding:3.5rem 3rem;di
       </div>
       <div class="form-group">
         <label class="form-label" for="msg">Mensagem</label>
-        <textarea class="form-textarea" id="msg" name="msg" placeholder="Conte sobre seu projeto — localização, metragem, prazos…"></textarea>
+        <textarea class="form-textarea" id="msg" maxlength="2000" placeholder="Conte sobre seu projeto — localização, metragem, prazos…"></textarea>
       </div>
-      <button type="submit" class="btn-submit">Enviar Mensagem</button>
-      <p id="form-feedback"></p>
+      <p class="form-note">Ao continuar, os dados preenchidos serão incluídos em uma mensagem no WhatsApp. Confira e toque em enviar no aplicativo. <a href="/privacidade/">Como tratamos seus dados</a>.</p><button type="submit" class="btn-submit" disabled>Continuar no WhatsApp</button><p class="form-note"><a href="https://wa.me/5544999626215?text=Ol%C3%A1%2C%20vim%20pelo%20site%20NM2%20e%20gostaria%20de%20um%20or%C3%A7amento" target="_blank" rel="noopener">Prefere conversar diretamente? Abra o WhatsApp</a>.</p>
+      <p id="form-feedback" role="status" aria-live="polite"></p>
     </form>
   </div>
 </section>
 
+</main>
 <!-- FOOTER -->
 <footer>
   <div>
     <img class="footer-logo" src="NM2 LOGOMARCA ARQUITETURA.png" alt="NM2 Arquitetura — escritório de arquitetura em Maringá-PR">
-    <p class="footer-legal" style="margin-top:.75rem;max-width:46ch">Escritório de arquitetura em Maringá-PR. Atendemos Maringá, Sarandi, Paiçandu, Mandaguari, Marialva, Apucarana, Paranavaí e toda a região noroeste do Paraná.</p>
+    <address class="footer-legal" style="margin-top:.75rem;max-width:46ch">Escritório de arquitetura em Maringá-PR. Atendemos Maringá, Sarandi, Paiçandu, Mandaguari, Marialva, Apucarana, Paranavaí e toda a região noroeste do Paraná.</address>
   </div>
-  <ul class="footer-links">
+  <ul class="footer-links"><li><a href="/arquitetura-residencial-maringa/">Residencial</a></li><li><a href="/arquitetura-comercial-maringa/">Comercial</a></li><li><a href="/privacidade/">Privacidade</a></li>
     <li><a href="#servicos">Serviços</a></li>
     <li><a href="#portfolio">Portfólio</a></li>
     <li><a href="#sobre">Sobre</a></li>
@@ -793,7 +841,7 @@ footer{background:var(--black);color:rgba(255,255,255,.4);padding:3.5rem 3rem;di
 </footer>
 
 <!-- LIGHTBOX -->
-<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Visualizador de projetos">
+<div class="lightbox" id="lightbox" tabindex="-1" role="dialog" aria-modal="true" aria-label="Visualizador de projetos">
   <button class="lightbox-close" id="lb-close" aria-label="Fechar">✕</button>
   <span class="lightbox-counter" id="lb-counter"></span>
   <button class="lightbox-nav lightbox-prev" id="lb-prev" aria-label="Anterior">
@@ -815,155 +863,6 @@ footer{background:var(--black);color:rgba(255,255,255,.4);padding:3.5rem 3rem;di
   <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
 </a>
 
-<script>
-// NAV
-const nav = document.getElementById('nav');
-function updateNav(){nav.classList.toggle('solid',window.scrollY>60)}
-window.addEventListener('scroll',updateNav,{passive:true});
-updateNav();
-
-// HERO IMAGE
-const heroImg = document.getElementById('hero-img');
-if(heroImg.complete) heroImg.classList.add('loaded');
-else heroImg.addEventListener('load',()=>heroImg.classList.add('loaded'));
-
-// MOBILE MENU
-const hamburger = document.getElementById('nav-hamburger');
-const mobileMenu = document.getElementById('mobile-menu');
-const mobileClose = document.getElementById('mobile-close');
-hamburger.addEventListener('click',()=>mobileMenu.classList.add('open'));
-mobileClose.addEventListener('click',()=>mobileMenu.classList.remove('open'));
-document.querySelectorAll('.mobile-link,.mobile-menu .btn-primary').forEach(el=>el.addEventListener('click',()=>mobileMenu.classList.remove('open')));
-
-// SCROLL REVEAL
-const revealObs = new IntersectionObserver((entries)=>{
-  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');revealObs.unobserve(e.target)}});
-},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
-document.querySelectorAll('.reveal').forEach(el=>revealObs.observe(el));
-
-// PORTFOLIO FILTER
-document.querySelectorAll('.filter-btn').forEach(btn=>{
-  btn.addEventListener('click',()=>{
-    document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
-    btn.classList.add('active');
-    const f=btn.dataset.filter;
-    document.querySelectorAll('.portfolio-item').forEach(item=>{
-      const show=f==='all'||item.dataset.cat===f;
-      item.style.display=show?'':'none';
-      if(show)item.classList.add('visible');
-    });
-  });
-});
-
-// LIGHTBOX
-const lightbox=document.getElementById('lightbox');
-const lbImg=document.getElementById('lb-img');
-const lbCat=document.getElementById('lb-cat');
-const lbName=document.getElementById('lb-name');
-const lbCounter=document.getElementById('lb-counter');
-const lbStrip=document.getElementById('lb-strip');
-let lbItems=[],lbIndex=0;
-
-function visibleItems(){
-  return Array.from(document.querySelectorAll('.portfolio-item')).filter(item=>item.style.display!=='none');
-}
-function buildStrip(){
-  lbStrip.innerHTML='';
-  lbItems.forEach((item,i)=>{
-    const src=item.querySelector('img').src;
-    const t=document.createElement('img');
-    t.src=src;
-    t.alt='';
-    t.className='lb-thumb';
-    t.addEventListener('click',()=>{lbIndex=i;showLightbox()});
-    lbStrip.appendChild(t);
-  });
-}
-function openLightbox(item){
-  lbItems=visibleItems();
-  lbIndex=lbItems.indexOf(item);
-  buildStrip();
-  showLightbox();
-  lightbox.classList.add('open');
-  document.body.style.overflow='hidden';
-}
-function showLightbox(){
-  const item=lbItems[lbIndex];
-  if(!item)return;
-  const img=item.querySelector('img');
-  lbImg.src=img.dataset.full||img.src;
-  lbImg.alt=img.alt;
-  lbCat.textContent=item.querySelector('.portfolio-cat').textContent;
-  lbName.textContent=item.querySelector('.portfolio-name').textContent;
-  lbCounter.textContent=(lbIndex+1)+' / '+lbItems.length;
-  Array.from(lbStrip.children).forEach((t,i)=>{
-    t.classList.toggle('active',i===lbIndex);
-    if(i===lbIndex)t.scrollIntoView({behavior:'smooth',inline:'center',block:'nearest'});
-  });
-  // pré-carrega vizinhas para navegação instantânea
-  [lbIndex+1,lbIndex-1].forEach(n=>{
-    const it=lbItems[(n+lbItems.length)%lbItems.length];
-    if(it){const im=it.querySelector('img');new Image().src=im.dataset.full||im.src;}
-  });
-}
-function closeLightbox(){
-  lightbox.classList.remove('open');
-  document.body.style.overflow='';
-}
-function lbNav(dir){
-  lbIndex=(lbIndex+dir+lbItems.length)%lbItems.length;
-  showLightbox();
-}
-document.getElementById('portfolio-grid').addEventListener('click',e=>{
-  const item=e.target.closest('.portfolio-item');
-  if(item)openLightbox(item);
-});
-document.getElementById('lb-close').addEventListener('click',closeLightbox);
-document.getElementById('lb-prev').addEventListener('click',()=>lbNav(-1));
-document.getElementById('lb-next').addEventListener('click',()=>lbNav(1));
-lightbox.addEventListener('click',e=>{if(e.target===lightbox)closeLightbox()});
-document.addEventListener('keydown',e=>{
-  if(!lightbox.classList.contains('open'))return;
-  if(e.key==='Escape')closeLightbox();
-  if(e.key==='ArrowLeft')lbNav(-1);
-  if(e.key==='ArrowRight')lbNav(1);
-});
-
-// FAQ
-document.querySelectorAll('.faq-q').forEach(btn=>{
-  btn.addEventListener('click',()=>{
-    const item=btn.closest('.faq-item');
-    const open=item.classList.contains('open');
-    document.querySelectorAll('.faq-item.open').forEach(i=>{i.classList.remove('open');i.querySelector('.faq-q').setAttribute('aria-expanded','false')});
-    if(!open){item.classList.add('open');btn.setAttribute('aria-expanded','true')}
-  });
-});
-
-// FORM → WHATSAPP
-document.getElementById('contact-form').addEventListener('submit',function(e){
-  e.preventDefault();
-  const nome=this.nome.value.trim(),tel=this.tel.value.trim(),tipo=this.tipo.value,msg=this.msg.value.trim();
-  if(!nome||!this.email.value.trim()){document.getElementById('form-feedback').textContent='Por favor, preencha nome e e-mail.';return}
-  const text=`Olá! Meu nome é ${nome}.${tel?' Tel: '+tel+'.':''} Interesse em: ${tipo||'projeto'}.${msg?'\n'+msg:''}`;
-  window.open('https://wa.me/5544999626215?text='+encodeURIComponent(text),'_blank');
-  document.getElementById('form-feedback').textContent='Redirecionando para o WhatsApp…';
-  setTimeout(()=>{document.getElementById('form-feedback').textContent='';this.reset()},4000);
-});
-
-// PARALLAX HERO
-let ticking=false;
-window.addEventListener('scroll',()=>{
-  if(!ticking){
-    requestAnimationFrame(()=>{
-      const bg=document.querySelector('.hero-bg img');
-      if(bg&&window.scrollY<window.innerHeight){
-        bg.style.transform=`scale(1) translateY(${window.scrollY*.28}px)`;
-      }
-      ticking=false;
-    });
-    ticking=true;
-  }
-},{passive:true});
-</script>
+<script src="/assets/site.js" defer></script>
 </body>
 </html>
